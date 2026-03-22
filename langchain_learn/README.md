@@ -346,7 +346,7 @@ result = chain.invoke("什么是 LCEL？")
 sequenceDiagram
     participant U as 用户代码
     participant SEQ as RunnableSequence
-    participant PAR as RunnableParallel
+    participant RPAR as RunnableParallel
     participant RET as Retriever
     participant PT as PromptTemplate
     participant LLM as ChatModel
@@ -356,14 +356,14 @@ sequenceDiagram
     U->>SEQ: invoke("什么是 LCEL？")
     SEQ->>CB: on_chain_start()
 
-    SEQ->>PAR: invoke("什么是 LCEL？")
+    SEQ->>RPAR: invoke("什么是 LCEL？")
     par 并行执行
-        PAR->>RET: invoke("什么是 LCEL？")
-        RET-->>PAR: [Document1, Document2, ...]
+        RPAR->>RET: invoke("什么是 LCEL？")
+        RET-->>RPAR: [Document1, Document2, ...]
     and
-        PAR->>PAR: RunnablePassthrough
+        RPAR->>RPAR: RunnablePassthrough
     end
-    PAR-->>SEQ: {"context": [docs], "question": "什么是 LCEL？"}
+    RPAR-->>SEQ: {"context": [docs], "question": "什么是 LCEL？"}
 
     SEQ->>PT: invoke({"context":..., "question":...})
     PT-->>SEQ: ChatPromptValue([SystemMessage, HumanMessage])

@@ -137,16 +137,16 @@ graph TD
     PRD -->|触发| Arch
     Design -->|触发| Eng
 
-    subgraph LLM Provider
+    subgraph LLM_Provider[LLM Provider]
         OpenAI[OpenAI API]
         Claude[Anthropic Claude]
         Gemini[Google Gemini]
         Ollama[Ollama 本地模型]
     end
 
-    PM -.->|调用| LLM Provider
-    Arch -.->|调用| LLM Provider
-    Eng -.->|调用| LLM Provider
+    PM -.->|调用| LLM_Provider
+    Arch -.->|调用| LLM_Provider
+    Eng -.->|调用| LLM_Provider
 ```
 
 ### 核心模块

@@ -359,7 +359,7 @@ sequenceDiagram
     D->>A: 注入推理循环
     A->>ML: 加载上下文记忆
     ML->>M: recall(query, session_id)
-    M-->>ML: Vec&lt;MemoryEntry&gt;
+    M-->>ML: Vec‹MemoryEntry›
     ML-->>A: 构建 system prompt + context
 
     loop 多轮推理 (max_turns)
