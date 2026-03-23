@@ -14,7 +14,7 @@
   <th>简介</th>
 </tr>
 <tr>
-  <td rowspan="41"><b>AI</b></td>
+  <td rowspan="42"><b>AI</b></td>
   <td rowspan="8">Agent 框架</td>
   <td><a href="./ai/agent-framework/A2A_learn">A2A</a></td>
   <td>Google Agent2Agent 开放协议，定义 AI Agent 间通信与协作标准</td>
@@ -144,7 +144,11 @@
   <td>AI 驱动的实时全球情报仪表盘，聚合 435+ 新闻源与 30+ 数据源</td>
 </tr>
 <tr>
-  <td rowspan="4">基础设施</td>
+  <td rowspan="5">基础设施</td>
+  <td><a href="./ai/infra/autoresearch_learn">autoresearch</a></td>
+  <td>Karpathy 的自主研究框架，AI Agent 在固定时间预算内自主迭代 LLM 训练实验</td>
+</tr>
+<tr>
   <td><a href="./ai/infra/daytona_learn">Daytona</a></td>
   <td>安全弹性的 Sandbox 基础设施平台，亚 90ms 创建隔离沙箱执行 AI 生成代码</td>
 </tr>
