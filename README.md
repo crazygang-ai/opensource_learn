@@ -14,7 +14,7 @@
   <th>简介</th>
 </tr>
 <tr>
-  <td rowspan="42"><b>AI</b></td>
+  <td rowspan="43"><b>AI</b></td>
   <td rowspan="8">Agent 框架</td>
   <td><a href="./ai/agent-framework/A2A_learn">A2A</a></td>
   <td>Google Agent2Agent 开放协议，定义 AI Agent 间通信与协作标准</td>
@@ -65,7 +65,7 @@
   <td>纯 Rust 个人 AI 助手，41+ 消息渠道、19+ LLM Provider、80+ 工具</td>
 </tr>
 <tr>
-  <td rowspan="4">应用平台</td>
+  <td rowspan="5">应用平台</td>
   <td><a href="./ai/app-platform/dify_learn">Dify</a></td>
   <td>开源 LLM 应用开发平台，可视化 Workflow + RAG + Agent + 插件系统</td>
 </tr>
@@ -80,6 +80,10 @@
 <tr>
   <td><a href="./ai/app-platform/ragflow_learn">RAGFlow</a></td>
   <td>基于深度文档理解的 RAG 引擎，融合 Agent 编排能力</td>
+</tr>
+<tr>
+  <td><a href="./ai/app-platform/youtu-rag_learn">Youtu-RAG</a></td>
+  <td>腾讯优图下一代 Agentic RAG 系统，自主决策 + 双层记忆 + 多 Agent 协作</td>
 </tr>
 <tr>
   <td rowspan="9">编程工具</td>
