@@ -14,8 +14,8 @@
   <th>简介</th>
 </tr>
 <tr>
-  <td rowspan="43"><b>AI</b></td>
-  <td rowspan="8">Agent 框架</td>
+  <td rowspan="52"><b>AI</b></td>
+  <td rowspan="9">Agent 框架</td>
   <td><a href="./ai/agent-framework/A2A_learn">A2A</a></td>
   <td>Google Agent2Agent 开放协议，定义 AI Agent 间通信与协作标准</td>
 </tr>
@@ -26,6 +26,10 @@
 <tr>
   <td><a href="./ai/agent-framework/deer-flow_learn">DeerFlow</a></td>
   <td>字节跳动基于 LangGraph 的 Agent 编排框架，支持子代理委派与沙箱执行</td>
+</tr>
+<tr>
+  <td><a href="./ai/agent-framework/hermes-agent_learn">hermes-agent</a></td>
+  <td>Nous Research 自我进化 AI Agent 框架，闭环学习 + 可插拔工具 + 子代理委派</td>
 </tr>
 <tr>
   <td><a href="./ai/agent-framework/langchain_learn">LangChain</a></td>
@@ -86,7 +90,7 @@
   <td>腾讯优图下一代 Agentic RAG 系统，自主决策 + 双层记忆 + 多 Agent 协作</td>
 </tr>
 <tr>
-  <td rowspan="9">编程工具</td>
+  <td rowspan="10">编程工具</td>
   <td><a href="./ai/coding-tool/CLI-Anything_learn">CLI-Anything</a></td>
   <td>将任意 GUI 应用自动转换为 AI Agent 可操作的命令行接口</td>
 </tr>
@@ -107,6 +111,10 @@
   <td>AI Agent 编码工具性能优化系统，28 个 Agent + 116 个 Skill</td>
 </tr>
 <tr>
+  <td><a href="./ai/coding-tool/last30days-skill_learn">last30days-skill</a></td>
+  <td>Claude Code / Gemini CLI Skill，跨 10+ 社交平台并行搜索生成结构化研究报告</td>
+</tr>
+<tr>
   <td><a href="./ai/coding-tool/OpenHands_learn">OpenHands</a></td>
   <td>AI 驱动的软件开发平台，从 issue 到 pull request 全自动化</td>
 </tr>
@@ -123,7 +131,7 @@
   <td>AI 编程代理工作流框架，14 个可组合 Skills 覆盖全开发流程</td>
 </tr>
 <tr>
-  <td rowspan="6">客户端</td>
+  <td rowspan="7">客户端</td>
   <td><a href="./ai/client/anything-llm_learn">AnythingLLM</a></td>
   <td>全功能私有化 AI 应用平台，支持 37+ LLM 提供商和 10+ 向量数据库</td>
 </tr>
@@ -140,6 +148,10 @@
   <td>自托管 AI 平台，类 ChatGPT Web 界面，支持 Ollama/OpenAI 等多后端</td>
 </tr>
 <tr>
+  <td><a href="./ai/client/project-nomad_learn">Project N.O.M.A.D.</a></td>
+  <td>自托管离线优先知识与教育服务器，集成 Ollama 聊天、离线百科、地图等多服务</td>
+</tr>
+<tr>
   <td><a href="./ai/client/quotio_learn">Quotio</a></td>
   <td>macOS 原生应用，集中管理多 AI Provider 账户、Quota 用量与 Model Fallback</td>
 </tr>
@@ -148,7 +160,7 @@
   <td>AI 驱动的实时全球情报仪表盘，聚合 435+ 新闻源与 30+ 数据源</td>
 </tr>
 <tr>
-  <td rowspan="5">基础设施</td>
+  <td rowspan="6">基础设施</td>
   <td><a href="./ai/infra/autoresearch_learn">autoresearch</a></td>
   <td>Karpathy 的自主研究框架，AI Agent 在固定时间预算内自主迭代 LLM 训练实验</td>
 </tr>
@@ -169,7 +181,11 @@
   <td>统一分布式计算框架，含 Data/Train/Serve/Tune/RLlib 等 AI 库生态</td>
 </tr>
 <tr>
-  <td rowspan="3">金融</td>
+  <td><a href="./ai/infra/supermemory_learn">supermemory</a></td>
+  <td>AI 应用记忆与上下文平台，跨会话事实提取、混合检索与遗忘策略</td>
+</tr>
+<tr>
+  <td rowspan="5">金融</td>
   <td><a href="./ai/finance/daily_stock_analysis_learn">daily_stock_analysis</a></td>
   <td>基于 AI 大模型的 A股/港股/美股自选股智能分析与多渠道推送系统</td>
 </tr>
@@ -182,7 +198,15 @@
   <td>微软 AI 驱动量化投资平台，覆盖数据、因子、模型、回测全链路</td>
 </tr>
 <tr>
-  <td rowspan="2">多媒体</td>
+  <td><a href="./ai/finance/TradingAgents_learn">TradingAgents</a></td>
+  <td>LangGraph 多 Agent 金融交易框架，模拟多空辩论与风控生成投资建议</td>
+</tr>
+<tr>
+  <td><a href="./ai/finance/TradingAgents-CN_learn">TradingAgents-CN</a></td>
+  <td>基于 LangGraph 的中文多智能体股票分析平台，多角色协作辩论输出投资建议</td>
+</tr>
+<tr>
+  <td rowspan="4">多媒体</td>
   <td><a href="./ai/multimedia/Deep-Live-Cam_learn">Deep-Live-Cam</a></td>
   <td>基于 InsightFace 的实时人脸替换工具，单张图片即可换脸</td>
 </tr>
@@ -191,7 +215,19 @@
   <td>基于 SV2TTS 的中文实时语音克隆系统，few-shot 语音克隆</td>
 </tr>
 <tr>
-  <td rowspan="1">学习资料</td>
+  <td><a href="./ai/multimedia/MoneyPrinterTurbo_learn">MoneyPrinterTurbo</a></td>
+  <td>输入主题由 LLM 写稿、拉取素材、TTS 配音、字幕合成，全自动生成短视频</td>
+</tr>
+<tr>
+  <td><a href="./ai/multimedia/MoneyPrinterV2_learn">MoneyPrinterV2</a></td>
+  <td>Ollama + Selenium 自动化变现工具，覆盖 YouTube Shorts 生成、Twitter 发帖、联盟营销等</td>
+</tr>
+<tr>
+  <td rowspan="2">学习资料</td>
+  <td><a href="./ai/resource/minimind_learn">minimind</a></td>
+  <td>从零训练超小 LLM 全流程项目，覆盖预训练、SFT、LoRA、DPO、RLHF 等</td>
+</tr>
+<tr>
   <td><a href="./ai/resource/system-prompts-and-models-of-ai-tools_learn">system-prompts-and-models-of-ai-tools</a></td>
   <td>30+ AI 工具的 System Prompt 与 Tool 定义收集库</td>
 </tr>
