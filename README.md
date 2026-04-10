@@ -14,7 +14,7 @@
   <th>简介</th>
 </tr>
 <tr>
-  <td rowspan="91"><b>AI</b></td>
+  <td rowspan="93"><b>AI</b></td>
   <td rowspan="11">Agent 框架</td>
   <td><a href="./ai/agent-framework/A2A_learn">A2A</a></td>
   <td>Google Agent2Agent 开放协议，定义 AI Agent 间通信与协作标准</td>
@@ -110,7 +110,7 @@
   <td>腾讯优图下一代 Agentic RAG 系统，自主决策 + 双层记忆 + 多 Agent 协作</td>
 </tr>
 <tr>
-  <td rowspan="20">编程工具</td>
+  <td rowspan="21">编程工具</td>
   <td><a href="./ai/coding-tool/cc-switch_learn">CC Switch</a></td>
   <td>五款 AI 编程 CLI 的统一 Provider 管理与一键切换跨平台桌面应用</td>
 </tr>
@@ -149,6 +149,10 @@
 <tr>
   <td><a href="./ai/coding-tool/get-shit-done_learn">GSD</a></td>
   <td>轻量级元提示与上下文工程框架，解决 AI 编码代理的上下文衰变问题</td>
+</tr>
+<tr>
+  <td><a href="./ai/coding-tool/gstack_learn">gstack</a></td>
+  <td>基于 Markdown skill 的 AI 工程工作流框架，23 个专家角色覆盖完整 sprint 流程</td>
 </tr>
 <tr>
   <td><a href="./ai/coding-tool/GitNexus_learn">GitNexus</a></td>
@@ -322,7 +326,7 @@
   <td>基于 LangGraph 的中文多智能体股票分析平台，多角色协作辩论输出投资建议</td>
 </tr>
 <tr>
-  <td rowspan="7">多媒体</td>
+  <td rowspan="8">多媒体</td>
   <td><a href="./ai/multimedia/Deep-Live-Cam_learn">Deep-Live-Cam</a></td>
   <td>基于 InsightFace 的实时人脸替换工具，单张图片即可换脸</td>
 </tr>
@@ -333,6 +337,10 @@
 <tr>
   <td><a href="./ai/multimedia/MockingBird_learn">MockingBird</a></td>
   <td>基于 SV2TTS 的中文实时语音克隆系统，few-shot 语音克隆</td>
+</tr>
+<tr>
+  <td><a href="./ai/multimedia/ml-sharp_learn">SHARP</a></td>
+  <td>Apple 单照片 3D Gaussian Splatting，一次前馈推理（< 1 秒）实现实时新视角合成</td>
 </tr>
 <tr>
   <td><a href="./ai/multimedia/MoneyPrinterTurbo_learn">MoneyPrinterTurbo</a></td>
