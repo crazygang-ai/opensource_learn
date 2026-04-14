@@ -14,7 +14,7 @@
   <th>简介</th>
 </tr>
 <tr>
-  <td rowspan="93"><b>AI</b></td>
+  <td rowspan="99"><b>AI</b></td>
   <td rowspan="11">Agent 框架</td>
   <td><a href="./ai/agent-framework/A2A_learn">A2A</a></td>
   <td>Google Agent2Agent 开放协议，定义 AI Agent 间通信与协作标准</td>
@@ -60,7 +60,11 @@
   <td>User-Aware LLM Agent 框架，自然语言转 SQL 并流式返回富 UI 组件</td>
 </tr>
 <tr>
-  <td rowspan="6">Agent 系统</td>
+  <td rowspan="7">Agent 系统</td>
+  <td><a href="./ai/agent-system/DeepTutor_learn">DeepTutor</a></td>
+  <td>Agent-Native 个性化 AI 教学平台，两层插件架构 + 多 Agent 协作实现教学全场景</td>
+</tr>
+<tr>
   <td><a href="./ai/agent-system/MiroFish_learn">MiroFish</a></td>
   <td>多 Agent 群体智能预测引擎，通过知识图谱和社交平台模拟生成预测报告</td>
 </tr>
@@ -110,7 +114,11 @@
   <td>腾讯优图下一代 Agentic RAG 系统，自主决策 + 双层记忆 + 多 Agent 协作</td>
 </tr>
 <tr>
-  <td rowspan="21">编程工具</td>
+  <td rowspan="23">编程工具</td>
+  <td><a href="./ai/coding-tool/Archon_learn">Archon</a></td>
+  <td>开源 AI 编码工作流引擎，YAML DAG 定义开发流程，多平台驱动 AI 编码代理</td>
+</tr>
+<tr>
   <td><a href="./ai/coding-tool/cc-switch_learn">CC Switch</a></td>
   <td>五款 AI 编程 CLI 的统一 Provider 管理与一键切换跨平台桌面应用</td>
 </tr>
@@ -163,6 +171,10 @@
   <td>Claude Code / Gemini CLI Skill，跨 10+ 社交平台并行搜索生成结构化研究报告</td>
 </tr>
 <tr>
+  <td><a href="./ai/coding-tool/multica_learn">multica</a></td>
+  <td>AI Agent 管理平台，编码 Agent 在看板上领取任务、自主执行、积累 Skill</td>
+</tr>
+<tr>
   <td><a href="./ai/coding-tool/oh-my-claudecode_learn">oh-my-claudecode</a></td>
   <td>Claude Code 多智能体编排系统，19 个专业化代理实现零配置并行任务执行</td>
 </tr>
@@ -195,7 +207,11 @@
   <td>AI 编程代理工作流框架，14 个可组合 Skills 覆盖全开发流程</td>
 </tr>
 <tr>
-  <td rowspan="8">客户端</td>
+  <td rowspan="9">客户端</td>
+  <td><a href="./ai/client/gallery_learn">AI Edge Gallery</a></td>
+  <td>Google 官方 Android 端侧 AI 应用，本地离线运行 LLM 进行对话、图片理解和 Agent Skills</td>
+</tr>
+<tr>
   <td><a href="./ai/client/anything-llm_learn">AnythingLLM</a></td>
   <td>全功能私有化 AI 应用平台，支持 37+ LLM 提供商和 10+ 向量数据库</td>
 </tr>
@@ -228,7 +244,7 @@
   <td>AI 驱动的实时全球情报仪表盘，聚合 435+ 新闻源与 30+ 数据源</td>
 </tr>
 <tr>
-  <td rowspan="17">基础设施</td>
+  <td rowspan="18">基础设施</td>
   <td><a href="./ai/infra/autoresearch_learn">autoresearch</a></td>
   <td>Karpathy 的自主研究框架，AI Agent 在固定时间预算内自主迭代 LLM 训练实验</td>
 </tr>
@@ -259,6 +275,10 @@
 <tr>
   <td><a href="./ai/infra/LocalAI_learn">LocalAI</a></td>
   <td>开源本地 AI 推理引擎，兼容 OpenAI API，35+ 后端，支持 CPU/GPU 和分布式部署</td>
+</tr>
+<tr>
+  <td><a href="./ai/infra/markitdown_learn">MarkItDown</a></td>
+  <td>微软多格式文件转 Markdown 工具，支持 PDF/Word/Excel 等 18+ 种格式，专为 LLM 设计</td>
 </tr>
 <tr>
   <td><a href="./ai/infra/new-api_learn">new-api</a></td>
@@ -359,9 +379,13 @@
   <td>微软语音 AI 模型家族，支持长达 90 分钟 TTS 和 60 分钟 ASR</td>
 </tr>
 <tr>
-  <td rowspan="9">学习资料</td>
+  <td rowspan="10">学习资料</td>
   <td><a href="./ai/resource/agency-agents_learn">agency-agents</a></td>
   <td>AI Agent 人格集合，150+ 专业化 Agent 提示词模板，支持 11 种 AI 编码工具</td>
+</tr>
+<tr>
+  <td><a href="./ai/resource/andrej-karpathy-skills_learn">andrej-karpathy-skills</a></td>
+  <td>Claude Code 行为准则插件，基于 Karpathy 对 LLM 编码缺陷的观察提炼四条行为原则</td>
 </tr>
 <tr>
   <td><a href="./ai/resource/claude-howto_learn">claude-howto</a></td>
