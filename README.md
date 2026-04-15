@@ -244,7 +244,7 @@
   <td>AI 驱动的实时全球情报仪表盘，聚合 435+ 新闻源与 30+ 数据源</td>
 </tr>
 <tr>
-  <td rowspan="18">基础设施</td>
+  <td rowspan="20">基础设施</td>
   <td><a href="./ai/infra/autoresearch_learn">autoresearch</a></td>
   <td>Karpathy 的自主研究框架，AI Agent 在固定时间预算内自主迭代 LLM 训练实验</td>
 </tr>
@@ -293,8 +293,16 @@
   <td>阿里巴巴通用 AI 沙箱平台，多语言 SDK + Docker/K8s 运行时</td>
 </tr>
 <tr>
+  <td><a href="./ai/infra/ppt-master_learn">ppt-master</a></td>
+  <td>AI 驱动的演示文稿生成系统，通过 SVG 中间格式精确转换为原生可编辑 PPTX</td>
+</tr>
+<tr>
   <td><a href="./ai/infra/promptfoo_learn">promptfoo</a></td>
   <td>LLM 评估与红队测试工具，自动化 prompt 评估、模型对比和安全漏洞扫描</td>
+</tr>
+<tr>
+  <td><a href="./ai/infra/qmd_learn">QMD</a></td>
+  <td>完全本地运行的 Markdown 混合搜索引擎，融合 BM25、向量语义搜索与 LLM Re-ranking</td>
 </tr>
 <tr>
   <td><a href="./ai/infra/ray_learn">Ray</a></td>
@@ -346,7 +354,7 @@
   <td>基于 LangGraph 的中文多智能体股票分析平台，多角色协作辩论输出投资建议</td>
 </tr>
 <tr>
-  <td rowspan="8">多媒体</td>
+  <td rowspan="9">多媒体</td>
   <td><a href="./ai/multimedia/Deep-Live-Cam_learn">Deep-Live-Cam</a></td>
   <td>基于 InsightFace 的实时人脸替换工具，单张图片即可换脸</td>
 </tr>
@@ -357,6 +365,10 @@
 <tr>
   <td><a href="./ai/multimedia/MockingBird_learn">MockingBird</a></td>
   <td>基于 SV2TTS 的中文实时语音克隆系统，few-shot 语音克隆</td>
+</tr>
+<tr>
+  <td><a href="./ai/multimedia/personaplex_learn">PersonaPlex</a></td>
+  <td>NVIDIA 实时全双工语音对话模型，通过文本角色提示词和音频 voice prompt 控制 persona</td>
 </tr>
 <tr>
   <td><a href="./ai/multimedia/ml-sharp_learn">SHARP</a></td>
@@ -379,13 +391,17 @@
   <td>微软语音 AI 模型家族，支持长达 90 分钟 TTS 和 60 分钟 ASR</td>
 </tr>
 <tr>
-  <td rowspan="10">学习资料</td>
+  <td rowspan="11">学习资料</td>
   <td><a href="./ai/resource/agency-agents_learn">agency-agents</a></td>
   <td>AI Agent 人格集合，150+ 专业化 Agent 提示词模板，支持 11 种 AI 编码工具</td>
 </tr>
 <tr>
   <td><a href="./ai/resource/andrej-karpathy-skills_learn">andrej-karpathy-skills</a></td>
   <td>Claude Code 行为准则插件，基于 Karpathy 对 LLM 编码缺陷的观察提炼四条行为原则</td>
+</tr>
+<tr>
+  <td><a href="./ai/resource/claude-code-best-practice_learn">claude-code-best-practice</a></td>
+  <td>Claude Code 最佳实践知识库，覆盖 Subagents、Commands、Skills、Hooks 等核心概念与三层编排架构</td>
 </tr>
 <tr>
   <td><a href="./ai/resource/claude-howto_learn">claude-howto</a></td>
@@ -420,10 +436,14 @@
   <td>30+ AI 工具的 System Prompt 与 Tool 定义收集库</td>
 </tr>
 <tr>
-  <td rowspan="20"><b>开发工具</b></td>
-  <td rowspan="1">前端</td>
+  <td rowspan="22"><b>开发工具</b></td>
+  <td rowspan="2">前端</td>
   <td><a href="./dev-tools/frontend/ui_learn">shadcn/ui</a></td>
   <td>基于 Radix UI 和 Tailwind CSS 的组件集合，CLI 工具将源码直接复制到项目中</td>
+</tr>
+<tr>
+  <td><a href="./dev-tools/frontend/lightweight-charts_learn">Lightweight Charts</a></td>
+  <td>TradingView 轻量级金融图表库，基于 HTML5 Canvas 实现高性能 K 线图等金融数据可视化</td>
 </tr>
 <tr>
   <td rowspan="5">基础设施</td>
@@ -484,7 +504,7 @@
   <td>社区驱动的 macOS 优质应用收录清单，自动化构建发布为网站与 npm 包</td>
 </tr>
 <tr>
-  <td rowspan="6">效率工具</td>
+  <td rowspan="7">效率工具</td>
   <td><a href="./dev-tools/productivity/atuin_learn">Atuin</a></td>
   <td>Rust 编写的 shell 历史管理工具，SQLite 存储 + 端到端加密跨机器同步</td>
 </tr>
@@ -499,6 +519,10 @@
 <tr>
   <td><a href="./dev-tools/productivity/starship_learn">Starship</a></td>
   <td>Rust 编写的极速跨 shell prompt 生成器，模块化插件架构与并行计算</td>
+</tr>
+<tr>
+  <td><a href="./dev-tools/productivity/WeFlow_learn">WeFlow</a></td>
+  <td>基于 Electron 的本地微信聊天记录实时查看、分析与导出工具，通过 WCDB 解密实现数据访问</td>
 </tr>
 <tr>
   <td><a href="./dev-tools/productivity/yazi_learn">Yazi</a></td>
