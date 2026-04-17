@@ -244,7 +244,7 @@
   <td>AI 驱动的实时全球情报仪表盘，聚合 435+ 新闻源与 30+ 数据源</td>
 </tr>
 <tr>
-  <td rowspan="20">基础设施</td>
+  <td rowspan="21">基础设施</td>
   <td><a href="./ai/infra/autoresearch_learn">autoresearch</a></td>
   <td>Karpathy 的自主研究框架，AI Agent 在固定时间预算内自主迭代 LLM 训练实验</td>
 </tr>
@@ -259,6 +259,10 @@
 <tr>
   <td><a href="./ai/infra/chrome-devtools-mcp_learn">chrome-devtools-mcp</a></td>
   <td>MCP Server，让 AI 编程助手通过 CDP 协议控制和调试 Chrome 浏览器</td>
+</tr>
+<tr>
+  <td><a href="./ai/infra/cognee_learn">Cognee</a></td>
+  <td>AI Agent 知识引擎，LLM 驱动构建知识图谱 + 向量索引，提供 remember/recall/forget/improve 语义化记忆 API</td>
 </tr>
 <tr>
   <td><a href="./ai/infra/daytona_learn">Daytona</a></td>
