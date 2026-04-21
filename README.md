@@ -207,7 +207,7 @@
   <td>AI 编程代理工作流框架，14 个可组合 Skills 覆盖全开发流程</td>
 </tr>
 <tr>
-  <td rowspan="9">客户端</td>
+  <td rowspan="10">客户端</td>
   <td><a href="./ai/client/gallery_learn">AI Edge Gallery</a></td>
   <td>Google 官方 Android 端侧 AI 应用，本地离线运行 LLM 进行对话、图片理解和 Agent Skills</td>
 </tr>
@@ -222,6 +222,10 @@
 <tr>
   <td><a href="./ai/client/cherry-studio_learn">Cherry Studio</a></td>
   <td>Electron 跨平台 AI 桌面客户端，支持 MCP 协议和知识库 RAG</td>
+</tr>
+<tr>
+  <td><a href="./ai/client/omi_learn">omi</a></td>
+  <td>开源「第二大脑」可穿戴 AI 系统，BLE 耳挂 + Flutter/Swift 客户端 + FastAPI 五服务协同实时转录与记忆</td>
 </tr>
 <tr>
   <td><a href="./ai/client/open-webui_learn">Open WebUI</a></td>
