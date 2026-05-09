@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 这是一个 **纯文档知识库**，而不是可执行代码项目：
 
 - 没有构建系统、测试框架、包管理器或 lint 配置
-- 内容为 128+ 个开源项目的源码阅读笔记，每个项目一个独立的 `*_learn/` 子目录，内部仅包含一个 `README.md`
+- 内容为 128+ 个开源项目的源码阅读笔记，每个项目一个独立的 `<owner>-<repo_name>-learn/` 子目录，内部仅包含一个 `README.md`
 - 所有笔记使用 **中文** 撰写，技术术语、专有名词、代码标识符保留英文原文（继承自 `/Users/crazy/own_project/.claude/CLAUDE.md`）
 - 根 `README.md` 是一个按 领域 → 分类 → 项目 组织的索引表格，链接到各子目录
 
@@ -18,11 +18,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `ai/` —— 按子分类组织：`agent-framework`、`agent-system`、`app-platform`、`client`、`coding-tool`、`finance`、`infra`、`multimedia`、`resource`
 - `dev-tools/` —— 按子分类组织：`frontend`、`infra`、`multimedia`、`networking`、`browser-extension`、`security`、`resource`、`productivity`
 
-路径约定：`<领域>/<分类>/<项目名>_learn/README.md`。新增项目时必须遵循此约定，并在根 `README.md` 索引表格的对应分类中插入新行（注意调整该分类首行的 `rowspan`）。
+路径约定：`<领域>/<分类>/<owner>-<repo_name>-learn/README.md`，其中 `owner` 来自 GitHub `owner/repo`，用于避免不同 owner 下同名仓库冲突。新增项目时必须遵循此约定，并在根 `README.md` 索引表格的对应分类中插入新行（注意调整该分类首行的 `rowspan`）。
 
 ## 笔记模板
 
-每个 `*_learn/README.md` 遵循统一结构。新增或编辑笔记时应保持一致：
+每个 `<owner>-<repo_name>-learn/README.md` 遵循统一结构。新增或编辑笔记时应保持一致：
 
 1. **标题** + 仓库地址链接 + 学习日期（绝对日期，如 `2026-04-17`）
 2. `> **以下为 AI 源码分析**` 引用块，包含：
@@ -38,12 +38,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 典型任务是"为某个开源项目新增一篇学习笔记"：
 
-1. 在 `<领域>/<分类>/` 下创建 `<项目名>_learn/` 目录
+1. 在 `<领域>/<分类>/` 下创建 `<owner>-<repo_name>-learn/` 目录
 2. 在其中创建 `README.md`，遵循上述模板
 3. 在根 `README.md` 的对应分类表格行中插入条目，调整 `rowspan`
 4. commit message 风格参考最近提交，形如：`Add N new learning notes and update README` 或 `Add <项目> learning note and update README`
 
-注意 `.gitignore` 已忽略 `.DS_Store` 和 `.claude`，不要手动提交这些文件。
+注意 `.gitignore` 已忽略 `.DS_Store` 和本地 Claude 设置文件，不要手动提交这些文件。
 
 ## 约束
 

@@ -1,0 +1,213 @@
+version: 1
+last_updated: 2026-05-07
+
+new_category_policy:
+  allowed: true
+  require_user_confirmation: false
+  slug_style: lower-kebab-case
+  label_style: concise-chinese
+  update_when_created:
+    - taxonomy.yaml
+
+classification_flow:
+  - 解析 GitHub URL，得到 owner、repo_name、canonical_url。
+  - 先读取目标仓库 README，提取项目定位、核心功能、技术栈、使用场景、是否以 AI/LLM/Agent 为核心。
+  - 再对照本 taxonomy 的 include/exclude/examples 判断领域和分类。
+  - 若没有现有分类能合理容纳，提出新分类 slug、label、path 和理由，并先询问用户是否创建。
+
+domains:
+  ai:
+    label: AI
+    description: AI 模型、LLM 应用、Agent、AI 基础设施与 AI 原生产品。
+    categories:
+      agent-framework:
+        label: Agent 框架
+        path: ai/agent-framework
+        include:
+          - 通用 Agent SDK、Agent runtime、Agent orchestration framework。
+          - 提供工具调用、规划、记忆、子代理、多 Agent 协作等可复用能力。
+          - 重点是被其他项目集成的框架或协议，而不是面向最终用户的完整产品。
+        exclude:
+          - 只服务某个具体业务场景的 Agent 应用。
+          - 专门用于 AI 编程的软件工程 Agent 工具。
+        examples:
+          - LangChain
+          - AutoGen
+          - openai-agents-python
+          - A2A
+      agent-system:
+        label: Agent 系统
+        path: ai/agent-system
+        include:
+          - 围绕 Agent 构建的完整系统、操作系统、网关或垂直业务平台。
+          - 具有明确应用场景，例如教学、安全测试、个人助手、上下文数据库、预测系统。
+        exclude:
+          - 主要作为开发者 SDK 的通用框架。
+          - 主要服务代码生成或软件工程流程的 AI 编程工具。
+        examples:
+          - DeepTutor
+          - OpenViking
+          - PentAGI
+          - OpenClaw
+      app-platform:
+        label: 应用平台
+        path: ai/app-platform
+        include:
+          - LLM 应用开发平台、RAG 平台、workflow 编排平台。
+          - 面向应用搭建、知识库、插件、工作流和企业集成。
+        exclude:
+          - 纯框架 SDK。
+          - 单一桌面、移动或 Web 客户端。
+        examples:
+          - Dify
+          - Langflow
+          - n8n
+          - RAGFlow
+      coding-tool:
+        label: 编程工具
+        path: ai/coding-tool
+        include:
+          - AI coding agent、AI IDE/CLI、代码生成、代码审查、spec-driven development。
+          - Claude Code、Codex、OpenHands、OpenCode 等 AI 软件工程工作流工具。
+          - 为编程代理提供 context、memory、prompt、skills、workflow 的工具。
+        exclude:
+          - 不含 AI 能力的普通开发 CLI 或终端工具。
+          - 通用 Agent 框架，除非主场景是写代码。
+        examples:
+          - Codex CLI
+          - OpenHands
+          - OpenCode
+          - Context7
+      client:
+        label: 客户端
+        path: ai/client
+        include:
+          - AI 聊天客户端、桌面客户端、Web UI、本地模型客户端、端侧 AI 应用。
+          - 面向最终用户的人机交互界面，而不是开发平台。
+        exclude:
+          - 主要面向开发者构建 LLM 应用的平台。
+          - 只提供后端 API 网关或模型服务的基础设施。
+        examples:
+          - Chatbox
+          - Cherry Studio
+          - Open WebUI
+          - AnythingLLM
+      infra:
+        label: 基础设施
+        path: ai/infra
+        include:
+          - 模型服务、推理运行时、评测、sandbox、browser automation、crawler、memory、MCP、数据处理等 AI 支撑能力。
+          - 主要被 AI 应用或 Agent 集成的基础设施组件。
+        exclude:
+          - 完整终端用户产品。
+          - 主要面向通用开发或运维且不以 AI 为核心的工具。
+        examples:
+          - LocalAI
+          - promptfoo
+          - Firecrawl
+          - Daytona
+      finance:
+        label: 金融
+        path: ai/finance
+        include:
+          - AI 金融分析、交易 Agent、量化研究、市场预测和投资辅助系统。
+        exclude:
+          - 通用财经数据工具且不含 AI/Agent 核心能力。
+        examples:
+          - OpenBB
+          - TradingAgents
+          - qlib
+      multimedia:
+        label: 多媒体
+        path: ai/multimedia
+        include:
+          - AI 语音、图像、视频、数字人、视觉识别、多媒体生成或处理。
+        exclude:
+          - 普通媒体播放器、录屏工具或图形工具。
+        examples:
+          - fish-speech
+          - Deep-Live-Cam
+          - VibeVoice
+      resource:
+        label: 学习资料
+        path: ai/resource
+        include:
+          - AI 相关文档、清单、prompt、skill、课程、实践指南和学习资料。
+        exclude:
+          - 可执行产品、框架或基础设施。
+        examples:
+          - learn-claude-code
+          - system-prompts-and-models-of-ai-tools
+          - skills
+  dev-tools:
+    label: 开发工具
+    description: 不以 AI 为核心的通用开发、运维、生产力、安全和资源类工具。
+    categories:
+      frontend:
+        label: 前端
+        path: dev-tools/frontend
+        include:
+          - 前端 UI 库、组件库、图表库、Web 前端工程工具。
+        examples:
+          - shadcn/ui
+          - lightweight-charts
+      infra:
+        label: 基础设施
+        path: dev-tools/infra
+        include:
+          - 通用开发基础设施、数据库、服务端框架、运行时、部署或 DevOps 工具。
+        exclude:
+          - AI/LLM/Agent 基础设施优先归入 ai/infra。
+        examples:
+          - uv
+          - dolt
+          - harness
+      multimedia:
+        label: 多媒体
+        path: dev-tools/multimedia
+        include:
+          - 不以 AI 为核心的媒体播放器、图像/视频/3D/录屏/可视化工具。
+        examples:
+          - iina
+          - arnis
+          - openscreen
+      networking:
+        label: 网络
+        path: dev-tools/networking
+        include:
+          - 网络代理、隧道、网络协议、连接管理、流量转发工具。
+        examples:
+          - sing-box
+      browser-extension:
+        label: 浏览器扩展
+        path: dev-tools/browser-extension
+        include:
+          - 浏览器插件、扩展脚本、浏览器增强工具。
+        examples:
+          - github-chinese
+      security:
+        label: 安全
+        path: dev-tools/security
+        include:
+          - 安全扫描、OSINT、漏洞检测、攻防工具、侦察工具。
+        exclude:
+          - AI 驱动的完整安全 Agent 系统优先考虑 ai/agent-system。
+        examples:
+          - katana
+          - Sherlock
+      resource:
+        label: 资源
+        path: dev-tools/resource
+        include:
+          - 非 AI 方向的工具清单、资源集合、学习资料。
+        examples:
+          - awesome-mac
+      productivity:
+        label: 效率工具
+        path: dev-tools/productivity
+        include:
+          - 终端效率、桌面效率、窗口管理、知识管理、文件管理和日常生产力工具。
+        examples:
+          - yazi
+          - zellij
+          - starship
