@@ -1,7 +1,7 @@
 # AiToEarn 源码学习笔记
 
 > 仓库地址：[yikart/AiToEarn](https://github.com/yikart/AiToEarn)
-> 学习日期：2026/05/22
+> 学习日期：2026-05-22
 
 ---
 

@@ -1,7 +1,7 @@
 # WeFlow 源码学习笔记
 
 > 仓库地址：[WeFlow](https://github.com/hicccc77/WeFlow)
-> 学习日期：2026/04/15
+> 学习日期：2026-04-15
 
 ---
 

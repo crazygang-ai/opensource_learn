@@ -1,7 +1,7 @@
 # multica 源码学习笔记
 
 > 仓库地址：[multica](https://github.com/multica-ai/multica)
-> 学习日期：2026/04/14
+> 学习日期：2026-04-14
 
 ---
 

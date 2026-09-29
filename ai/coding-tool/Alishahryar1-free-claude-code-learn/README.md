@@ -1,7 +1,7 @@
 # free-claude-code 源码学习笔记
 
 > 仓库地址：[Alishahryar1/free-claude-code](https://github.com/Alishahryar1/free-claude-code)
-> 学习日期：2026/05/22
+> 学习日期：2026-05-22
 
 ---
 

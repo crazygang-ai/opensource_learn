@@ -1,7 +1,7 @@
 # andrej-karpathy-skills 源码学习笔记
 
 > 仓库地址：[andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills)
-> 学习日期：2026/04/14
+> 学习日期：2026-04-14
 
 ---
 

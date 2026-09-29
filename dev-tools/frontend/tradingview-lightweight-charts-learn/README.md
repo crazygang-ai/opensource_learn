@@ -1,7 +1,7 @@
 # lightweight-charts 源码学习笔记
 
 > 仓库地址：[lightweight-charts](https://github.com/tradingview/lightweight-charts)
-> 学习日期：2026/04/15
+> 学习日期：2026-04-15
 
 ---
 

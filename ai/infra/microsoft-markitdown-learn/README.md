@@ -1,7 +1,7 @@
 # markitdown 源码学习笔记
 
 > 仓库地址：[markitdown](https://github.com/microsoft/markitdown)
-> 学习日期：2026/04/14
+> 学习日期：2026-04-14
 
 ---
 

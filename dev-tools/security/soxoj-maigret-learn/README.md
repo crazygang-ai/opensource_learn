@@ -1,7 +1,7 @@
 # maigret 源码学习笔记
 
 > 仓库地址：[soxoj/maigret](https://github.com/soxoj/maigret)
-> 学习日期：2026/05/08
+> 学习日期：2026-05-08
 
 ---
 

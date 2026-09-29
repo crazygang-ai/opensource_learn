@@ -1,7 +1,7 @@
 # Archon 源码学习笔记
 
 > 仓库地址：[Archon](https://github.com/coleam00/Archon)
-> 学习日期：2026/04/14
+> 学习日期：2026-04-14
 
 ---
 

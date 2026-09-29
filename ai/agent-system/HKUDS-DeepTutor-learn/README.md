@@ -1,7 +1,7 @@
 # DeepTutor 源码学习笔记
 
 > 仓库地址：[DeepTutor](https://github.com/HKUDS/DeepTutor)
-> 学习日期：2026/04/14
+> 学习日期：2026-04-14
 
 ---
 

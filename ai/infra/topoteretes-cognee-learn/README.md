@@ -1,7 +1,7 @@
 # cognee 源码学习笔记
 
 > 仓库地址：[cognee](https://github.com/topoteretes/cognee)
-> 学习日期：2026/04/16
+> 学习日期：2026-04-16
 
 ---
 

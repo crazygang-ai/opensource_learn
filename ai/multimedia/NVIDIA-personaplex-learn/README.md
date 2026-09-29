@@ -1,7 +1,7 @@
 # PersonaPlex 源码学习笔记
 
 > 仓库地址：[PersonaPlex](https://github.com/NVIDIA/personaplex)
-> 学习日期：2026/04/15
+> 学习日期：2026-04-15
 
 ---
 
