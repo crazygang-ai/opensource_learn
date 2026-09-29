@@ -26,11 +26,13 @@ description: 将一个 GitHub 仓库准备加入 opensource_learn 前必须使�
 
 1. 当前仓库根 `taxonomy.yaml`
 
-`REPO_ROOT` 使用此命令获取：
+`REPO_ROOT` 指仓库根的绝对路径，使用此命令获取：
 
 ```bash
 git rev-parse --show-toplevel
 ```
+
+后续所有命令把 `<REPO_ROOT>` 替换成这条命令输出的绝对路径字面量。不要用 shell 变量拼接：每次 Bash 调用都是独立 shell，变量不会保留。
 
 ## 工作流程
 
@@ -39,7 +41,7 @@ git rev-parse --show-toplevel
 使用本 skill 的脚本解析 `owner`、`repo_name`、标准 GitHub URL 和学习目录名：
 
 ```bash
-python3 "$REPO_ROOT/.claude/skills/importer/scripts/learn_target.py" parse "$GITHUB_URL"
+python3 "<REPO_ROOT>/.qoder/skills/importer/scripts/learn_target.py" parse "<github_url>"
 ```
 
 学习目录名固定为：
@@ -53,7 +55,7 @@ python3 "$REPO_ROOT/.claude/skills/importer/scripts/learn_target.py" parse "$GIT
 使用本 skill 的脚本进行判断：
 
 ```bash
-python3 "$REPO_ROOT/.claude/skills/importer/scripts/learn_target.py" check "$REPO_ROOT" "$GITHUB_URL"
+python3 "<REPO_ROOT>/.qoder/skills/importer/scripts/learn_target.py" check "<REPO_ROOT>" "<github_url>"
 ```
 
 如果输出 `EXISTS`，说明已经学习过，立即结束，不继续分类，不创建目录。
@@ -95,10 +97,10 @@ curl -fsSL "https://raw.githubusercontent.com/<owner>/<repo_name>/HEAD/README.md
 - 如果 `taxonomy.yaml` 信息不足，再对照根 `README.md` 中的领域、分类、已有项目样例。
 - 最后只核对最终目标目录是否真实存在。
 
-目标路径必须是分类父目录的绝对路径，例如：
+目标路径必须是分类父目录的绝对路径，其中 `<REPO_ROOT>` 是「必读上下文」里 `git rev-parse --show-toplevel` 得到的绝对路径：
 
 ```text
-/Users/crazy/own_project/opensource_learn/ai/coding-tool
+<REPO_ROOT>/ai/coding-tool
 ```
 
 不要提前创建最终 `<owner>-<repo_name>-learn` 学习目录；本 skill 只输出分类父目录。
@@ -111,10 +113,12 @@ curl -fsSL "https://raw.githubusercontent.com/<owner>/<repo_name>/HEAD/README.md
 
 - slug 使用 lower-kebab-case。
 - label 使用简洁中文。
-- path 必须是绝对路径，例如 `/Users/crazy/own_project/opensource_learn/dev-tools/security`。
+- path 指分类目录相对仓库根的位置，固定写成 `domain/category`，例如 `dev-tools/security`，不要带前导 `/`，也不要用 `<REPO_ROOT>` 拼接。
 - 说明为什么现有分类不合适，以及新分类适合收纳什么项目。
 
-### 6. 目录不存在时
+只有第 7 步输出给用户的目标路径才使用绝对路径，例如 `<REPO_ROOT>/dev-tools/security`。`taxonomy.yaml` 里写绝对路径会让 `validate_index.py` 的 `path:` 正则匹配失败，直接报 `missing-taxonomy-category`。
+
+### 6. 确认并按需创建分类目录
 
 判断出分类目录后，必须用命令显式确认目录是否存在：
 
@@ -122,16 +126,20 @@ curl -fsSL "https://raw.githubusercontent.com/<owner>/<repo_name>/HEAD/README.md
 test -d "<absolute_category_path>" && echo "EXISTS_DIR <absolute_category_path>" || echo "MISSING_DIR <absolute_category_path>"
 ```
 
-只有看到 `EXISTS_DIR`，最终输出才可以标注 `（已存在分类目录）`。
+按输出分支处理，不要跳过检测直接 `mkdir`：
 
-如果判断出的分类目录不存在，直接创建：
+- `EXISTS_DIR`：不创建目录，最终输出标注 `（已存在分类目录）`。
+- `MISSING_DIR`：用下面的命令创建目录，最终输出标注 `（已创建分类目录）`。
 
 ```bash
 mkdir -p "<absolute_category_path>"
 ```
 
-如果看到 `MISSING_DIR`，再创建分类目录；创建后也要同步更新 `taxonomy.yaml`，补充该分类的 `label`、`path`、`include`、`exclude`（如有）和 `examples`（可为空）。
-- 不修改根 `README.md`。
+创建后同步更新 `taxonomy.yaml`：补充该分类的 `label`、`path`、`include`、`exclude`（如有）和 `examples`（可为空），并把顶层 `last_updated` 更新为当天日期（`YYYY-MM-DD`）。`path` 写相对路径 `domain/category`，不带前导 `/`。
+
+分类条目的缩进层级、以及 `validate_index.py` 对 `path:` 的匹配行为，以 `.qoder/skills/indexer/SKILL.md` 第 4 步为唯一规范来源。写入前先读该节，不要凭记忆缩进。
+
+本 skill 不修改根 `README.md`。
 
 ### 7. 最终输出
 

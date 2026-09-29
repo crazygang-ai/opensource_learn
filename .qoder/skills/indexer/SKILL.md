@@ -22,20 +22,20 @@ description: 同步 opensource_learn 根 README 项目索引和 taxonomy.yaml �
 
 ### 1. 获取仓库根目录
 
-只运行：
+`REPO_ROOT` 指仓库根的绝对路径，使用此命令获取：
 
 ```bash
 git rev-parse --show-toplevel
 ```
 
-后续命令使用得到的绝对路径，不要用 shell 变量拼接。
+后续所有命令把 `<REPO_ROOT>` 替换成这条命令输出的绝对路径字面量。不要用 shell 变量拼接：每次 Bash 调用都是独立 shell，变量不会保留。
 
 ### 2. 运行校验
 
 只运行：
 
 ```bash
-python3 /absolute/repo/.claude/skills/indexer/scripts/validate_index.py /absolute/repo
+python3 "<REPO_ROOT>/.qoder/skills/indexer/scripts/validate_index.py" "<REPO_ROOT>"
 ```
 
 结果处理：
@@ -80,7 +80,13 @@ slug:
   examples: []
 ```
 
-同时更新 `last_updated` 为当天日期。`taxonomy.yaml` 不记录单个学习项目。
+上面是缩进简写，不要原样抄到文件顶层。实际位置是 `domains.<domain>.categories.<slug>`：`slug` 缩进 6 空格，`label` / `path` / `include` / `examples` 缩进 8 空格。
+
+`validate_index.py` 用正则 `^\s+path:` 抓取 `path:` 的值，不解析 YAML、也不校验它挂在哪个 domain 下：只要 `path:` 前有任意非零缩进，层级挂错也照样输出 `PASS`；反之若写在第 0 列则完全不匹配，直接报 `missing-taxonomy-category`。所以缩进层级必须自行核对，不能依赖校验结果。
+
+同时更新顶层 `last_updated` 为当天日期（`YYYY-MM-DD`）。`taxonomy.yaml` 不记录单个学习项目。
+
+本节是 `taxonomy.yaml` 分类条目格式的唯一规范来源，`/importer` 创建新分类时也以本节为准。
 
 ### 5. 重新校验
 

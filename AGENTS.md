@@ -1,14 +1,14 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+本文件为 Qoder 在本仓库中工作时提供约定说明。
 
 ## 仓库性质
 
 这是一个 **纯文档知识库**，而不是可执行代码项目：
 
 - 没有构建系统、测试框架、包管理器或 lint 配置
-- 内容为 128+ 个开源项目的源码阅读笔记，每个项目一个独立的 `<owner>-<repo_name>-learn/` 子目录，内部仅包含一个 `README.md`
-- 所有笔记使用 **中文** 撰写，技术术语、专有名词、代码标识符保留英文原文（继承自 `/Users/crazy/own_project/.claude/CLAUDE.md`）
+- 内容为 145+ 个开源项目的源码阅读笔记，每个项目一个独立的 `<owner>-<repo_name>-learn/` 子目录，内部仅包含一个 `README.md`
+- 所有笔记使用 **中文** 撰写，技术术语、专有名词、代码标识符保留英文原文
 - 根 `README.md` 是一个按 领域 → 分类 → 项目 组织的索引表格，链接到各子目录
 
 ## 目录组织
@@ -24,7 +24,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 每个 `<owner>-<repo_name>-learn/README.md` 遵循统一结构。新增或编辑笔记时应保持一致：
 
-1. **标题** + 仓库地址链接 + 学习日期（绝对日期，如 `2026-04-17`）
+1. **标题** + 仓库地址链接 + 学习日期（格式固定 `YYYY-MM-DD`，如 `2026-04-17`；不要写 `2026/04/17`）
 2. `> **以下为 AI 源码分析**` 引用块，包含：
    - **一句话概括**
    - **要点速览**（核心模块 / 职责 / 关键文件 三列表格）
@@ -38,12 +38,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 典型任务是"为某个开源项目新增一篇学习笔记"：
 
-1. 在 `<领域>/<分类>/` 下创建 `<owner>-<repo_name>-learn/` 目录
-2. 在其中创建 `README.md`，遵循上述模板
-3. 在根 `README.md` 的对应分类表格行中插入条目，调整 `rowspan`
-4. commit message 风格参考最近提交，形如：`Add N new learning notes and update README` 或 `Add <项目> learning note and update README`
+1. 调用 `/importer` skill 做前置判断：解析 GitHub URL 得到 `owner`/`repo_name`、查重是否已学习过、读取目标仓库 README 后按 `taxonomy.yaml` 给出分类父目录（必要时创建新分类并回写 `taxonomy.yaml`）。它只输出 GitHub 地址与目标路径两行，不写笔记
+2. 在 `<领域>/<分类>/` 下创建 `<owner>-<repo_name>-learn/` 目录
+3. 在其中创建 `README.md`，遵循上述模板
+4. 调用 `/indexer` skill 同步索引：在根 `README.md` 对应分类的表格行中插入条目、调整 `rowspan`，并补齐 `taxonomy.yaml` 缺失的分类。它只改根 `README.md` 和 `taxonomy.yaml`
+5. commit message 风格参考最近提交，形如：`Add N new learning notes and update README` 或 `Add <项目> learning note and update README`
 
-注意 `.gitignore` 已忽略 `.DS_Store` 和本地 Claude 设置文件，不要手动提交这些文件。
+两个 skill 位于 `.qoder/skills/`，各自带 `scripts/` 辅助脚本（`learn_target.py` 负责 URL 解析与查重，`validate_index.py` 负责校验索引与 `rowspan`，输出 `PASS` 才算同步完成）。
+
+注意 `.gitignore` 已忽略 `.DS_Store` 和本地 Qoder 设置文件，不要手动提交这些文件。
 
 ## 约束
 
