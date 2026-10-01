@@ -14,7 +14,7 @@
   <th>简介</th>
 </tr>
 <tr>
-  <td rowspan="144"><b>AI</b></td>
+  <td rowspan="151"><b>AI</b></td>
   <td rowspan="11">Agent 框架</td>
   <td><a href="./ai/agent-framework/a2aproject-A2A-learn">A2A</a></td>
   <td>Google Agent2Agent 开放协议，定义 AI Agent 间通信与协作标准</td>
@@ -60,7 +60,7 @@
   <td>User-Aware LLM Agent 框架，自然语言转 SQL 并流式返回富 UI 组件</td>
 </tr>
 <tr>
-  <td rowspan="11">Agent 系统</td>
+  <td rowspan="13">Agent 系统</td>
   <td><a href="./ai/agent-system/yikart-AiToEarn-learn">AiToEarn</a></td>
   <td>面向创作者的 AI Agent 内容生产与多平台分发变现平台，Claude Agent SDK + 13 平台 + MCP 编排全自动流水线</td>
 </tr>
@@ -77,12 +77,20 @@
   <td>约 270 行 Python 实现的极简 Claude Code 替代品，展示 LLM + Tool Use + Agent Loop 的核心形态</td>
 </tr>
 <tr>
+  <td><a href="./ai/agent-system/TencentCloud-Octop-learn">Octop</a></td>
+  <td>腾讯云开源的自托管多用户多 agent AI 助手平台，单 Python 进程把 Web Dashboard、CLI、八种 IM 渠道与 cron 统一路由到进程内 LangGraph agent runtime</td>
+</tr>
+<tr>
   <td><a href="./ai/agent-system/openclaw-openclaw-learn">OpenClaw</a></td>
   <td>自托管个人 AI 助手网关，统一接入 20+ 消息通道</td>
 </tr>
 <tr>
   <td><a href="./ai/agent-system/RightNow-AI-openfang-learn">OpenFang</a></td>
   <td>Rust 编写的 Agent Operating System，14 个模块化 crate</td>
+</tr>
+<tr>
+  <td><a href="./ai/agent-system/THU-MAIC-OpenMAIC-learn">OpenMAIC</a></td>
+  <td>清华 MAIC 开源的多 Agent 互动课堂平台，一键生成含幻灯片、测验与互动模拟的完整课程，AI 老师/AI 同学课堂实时多 Agent 讲课讨论</td>
 </tr>
 <tr>
   <td><a href="./ai/agent-system/every-app-open-seo-learn">open-seo</a></td>
@@ -130,7 +138,7 @@
   <td>腾讯优图下一代 Agentic RAG 系统，自主决策 + 双层记忆 + 多 Agent 协作</td>
 </tr>
 <tr>
-  <td rowspan="37">编程工具</td>
+  <td rowspan="41">编程工具</td>
   <td><a href="./ai/coding-tool/rohitg00-agentmemory-learn">agentmemory</a></td>
   <td>跨 AI 编码 Agent 共享的持久化记忆层，hook 自动采集 + LLM 压缩 + BM25/向量/知识图谱混合检索</td>
 </tr>
@@ -163,6 +171,10 @@
   <td>基于 Ghostty 的原生 macOS 终端应用，专为 AI coding agent 并行工作设计</td>
 </tr>
 <tr>
+  <td><a href="./ai/coding-tool/tirth8205-code-review-graph-learn">code-review-graph</a></td>
+  <td>本地优先的代码知识图谱：Tree-sitter 把代码库解析成函数/调用/继承图存进 SQLite 增量维护，经 MCP 给 AI 编码工具提供精准影响范围上下文</td>
+</tr>
+<tr>
   <td><a href="./ai/coding-tool/openai-codex-learn">Codex CLI</a></td>
   <td>OpenAI 本地 AI 编程助手，沙箱化命令执行实现安全自主编码</td>
 </tr>
@@ -183,12 +195,20 @@
   <td>面向 AI Agent 的 PPT 生成 Skill，结构化 JSON 计划 + 12 套主题 1020 个版式选配，React SSR 渲染并导出可编辑 PPTX</td>
 </tr>
 <tr>
+  <td><a href="./ai/coding-tool/affaan-m-ECC-learn">ECC</a></td>
+  <td>「harness 原生的 agent 操作系统」：293 个 skills、68 个 agents 等作为 canonical 内容，经声明式 manifest 与 15 个适配器选择性安装进各编码 agent 工具</td>
+</tr>
+<tr>
   <td><a href="./ai/coding-tool/affaan-m-everything-claude-code-learn">Everything Claude Code</a></td>
   <td>AI Agent 编码工具性能优化系统，28 个 Agent + 116 个 Skill</td>
 </tr>
 <tr>
   <td><a href="./ai/coding-tool/Alishahryar1-free-claude-code-learn">free-claude-code</a></td>
   <td>本地 FastAPI 反向代理伪装成 Anthropic Messages API，把 Claude Code 路由到 12 家第三方/本地 LLM</td>
+</tr>
+<tr>
+  <td><a href="./ai/coding-tool/gastownhall-gastown-learn">gastown</a></td>
+  <td>Steve Yegge 开源的 Go 多 agent 编排系统，在 tmux 中管理 20-30+ 个 AI coding agent，工作状态外置到 Beads（Dolt SQL）与 git worktree，看门狗与合并队列驱动自治协作</td>
 </tr>
 <tr>
   <td><a href="./ai/coding-tool/gsd-build-get-shit-done-learn">GSD</a></td>
@@ -201,6 +221,10 @@
 <tr>
   <td><a href="./ai/coding-tool/abhigyanpatwari-GitNexus-learn">GitNexus</a></td>
   <td>将代码库索引为知识图谱，通过 MCP 协议为 AI Agent 提供深度代码感知</td>
+</tr>
+<tr>
+  <td><a href="./ai/coding-tool/Nutlope-hallmark-learn">hallmark</a></td>
+  <td>面向 AI 编码助手的「反 AI 味」设计 skill，核心是约 6200 行纯 Markdown 设计协议，以结构多样性对抗 LLM 训练分布的默认审美</td>
 </tr>
 <tr>
   <td><a href="./ai/coding-tool/herdrdev-herdr-learn">herdr</a></td>
@@ -328,7 +352,7 @@
   <td>AI 驱动的实时全球情报仪表盘，聚合 435+ 新闻源与 30+ 数据源</td>
 </tr>
 <tr>
-  <td rowspan="26">基础设施</td>
+  <td rowspan="27">基础设施</td>
   <td><a href="./ai/infra/lyogavin-airllm-learn">airllm</a></td>
   <td>离线按层切分 checkpoint + 在线 forward-hook 流式加载，把超大 LLM 推理显存压到单层权重大小，70B 模型跑在 4GB 显卡</td>
 </tr>
@@ -427,6 +451,10 @@
 <tr>
   <td><a href="./ai/infra/supermemoryai-supermemory-learn">supermemory</a></td>
   <td>AI 应用记忆与上下文平台，跨会话事实提取、混合检索与遗忘策略</td>
+</tr>
+<tr>
+  <td><a href="./ai/infra/superdesigndev-treg-learn">treg</a></td>
+  <td>「OpenRouter for Tools」：把上千第三方 API 端点策展成目录并统一托管团队凭据的服务端注入代理，AI agent 一个 token 按次计费调用任何工具，密钥永不离开服务器</td>
 </tr>
 <tr>
   <td><a href="./ai/infra/unslothai-unsloth-learn">unsloth</a></td>
@@ -600,7 +628,7 @@
   <td>30+ AI 工具的 System Prompt 与 Tool 定义收集库</td>
 </tr>
 <tr>
-  <td rowspan="26"><b>开发工具</b></td>
+  <td rowspan="28"><b>开发工具</b></td>
   <td rowspan="2">前端</td>
   <td><a href="./dev-tools/frontend/shadcn-ui-ui-learn">shadcn/ui</a></td>
   <td>基于 Radix UI 和 Tailwind CSS 的组件集合，CLI 工具将源码直接复制到项目中</td>
@@ -615,7 +643,11 @@
   <td>Longbridge 基于 Zed GPUI 抽取的 Rust 桌面应用框架，无样式行为层 + 视觉组件系统 + QuickJS 驱动的 JS 扩展运行时</td>
 </tr>
 <tr>
-  <td rowspan="6">基础设施</td>
+  <td rowspan="7">基础设施</td>
+  <td><a href="./dev-tools/infra/psf-black-learn">black</a></td>
+  <td>PSF 维护的「不妥协」Python 代码格式化器：源码解析成保留注释空白的 CST 按固定规则重排，输出确定、幂等、语义等价</td>
+</tr>
+<tr>
   <td><a href="./dev-tools/infra/dolthub-dolt-learn">Dolt</a></td>
   <td>MySQL 兼容数据库，基于 Prolly Tree 存储引擎提供 Git 级别版本控制能力</td>
 </tr>
@@ -685,7 +717,7 @@
   <td>社区驱动的 macOS 优质应用收录清单，自动化构建发布为网站与 npm 包</td>
 </tr>
 <tr>
-  <td rowspan="7">效率工具</td>
+  <td rowspan="8">效率工具</td>
   <td><a href="./dev-tools/productivity/atuinsh-atuin-learn">Atuin</a></td>
   <td>Rust 编写的 shell 历史管理工具，SQLite 存储 + 端到端加密跨机器同步</td>
 </tr>
@@ -700,6 +732,10 @@
 <tr>
   <td><a href="./dev-tools/productivity/starship-starship-learn">Starship</a></td>
   <td>Rust 编写的极速跨 shell prompt 生成器，模块化插件架构与并行计算</td>
+</tr>
+<tr>
+  <td><a href="./dev-tools/productivity/refactoringhq-tolaria-learn">Tolaria</a></td>
+  <td>基于 Tauri v2 + React 19 + Rust 的 Markdown 知识库桌面应用，以「文件系统是唯一事实源」为核心原则，原生集成 git 与 MCP/AI Agent</td>
 </tr>
 <tr>
   <td><a href="./dev-tools/productivity/hicccc77-WeFlow-learn">WeFlow</a></td>
