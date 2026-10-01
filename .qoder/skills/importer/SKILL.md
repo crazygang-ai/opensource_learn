@@ -71,17 +71,25 @@ python3 "<REPO_ROOT>/.qoder/skills/importer/scripts/learn_target.py" check "<REP
 
 如果未学习过，必须先读取目标 GitHub 仓库的 README，再判断分类。这是分类前置条件，不得只凭仓库名、已有记忆、根 `README.md` 样例或 `taxonomy.yaml` 直接分类。
 
-固定使用 `raw.githubusercontent.com` 的 `HEAD` 引用获取完整 README 内容，不使用 GitHub REST API、GitHub 页面、`gh repo view` 或临时 clone：
+统一使用本 skill 的脚本读取 README。脚本内部按 `api.github.com/repos/<owner>/<repo>/readme` → `raw.githubusercontent.com/<owner>/<repo>/HEAD/`（含常见 README 文件名变体）两级回退，联网对象仅限这两个 GitHub 官方 host；不克隆源码，不抓取 GitHub 页面：
 
 ```bash
-curl -fsSL "https://raw.githubusercontent.com/<owner>/<repo_name>/HEAD/README.md"
+python3 "<REPO_ROOT>/.qoder/skills/importer/scripts/learn_target.py" readme "<github_url>"
 ```
 
-这条命令必须原样执行，不要追加 `| head`、`| sed`、`| tail` 或其他 pipeline。`HEAD` 会跟随仓库默认分支，避免猜 `main` / `master`。如果 `curl` 失败，立即停止，不要输出猜测分类。只需要读取 README，不做深度源码分析。
+这条命令必须原样执行，不要追加 `| head`、`| sed`、`| tail` 或其他 pipeline：README 正文从 stdout 整读，`STATUS` / `WARN` / `META` / `ERROR` 诊断行只出现在 stderr。不要自己拼 `curl` 或 `gh api`；凭据由脚本从环境变量 `GH_TOKEN` / `GITHUB_TOKEN` 自行读取，命令行里不得出现 token、`Authorization`、`echo $GH_TOKEN`、`env | grep TOKEN`。
 
-进入下一步分类前，必须已经获得目标 README 的实际内容片段或等价 metadata 输出。如果 README 获取失败，停止流程并简短说明无法读取目标 README；不要输出猜测的目标路径。
+按脚本的退出码分支处理：
 
-从目标 README 中提取：
+- `0`：stdout 即 README 正文，继续第 4 步。`token_source=anonymous` 属正常降级，不要因为没有 token 就停止；`WARN TOKEN_INVALID` 表示环境变量里的 token 已失效，属运维问题，不要因此停止，也不要写进最终两行输出。
+- `2`：URL 无效，或仓库不存在 / 不可访问（可能为私有仓库）。停止，向用户转述 stderr 里的 `ERROR` 行，不要输出猜测分类或目标路径。
+- `3`：两级都失败（网络故障或限流）。停止，转述 stderr 最后一条 `ERROR` 的原因与 URL，不要输出猜测分类。
+- `4`：仓库存在但没有 README。改用 stderr 里的 `META` 行（`description` / `topics` / `language` / `default_branch`）继续第 4 步分类，仍然不得只凭仓库名分类。
+- `5`：取回内容疑似错误页。停止并转述 stderr 的 `ERROR`。
+
+只需要读取 README，不做深度源码分析。
+
+从目标 README（或退出码 `4` 时的 `META` 行）中提取：
 
 - 项目一句话定位。
 - 核心功能和主要使用者。
