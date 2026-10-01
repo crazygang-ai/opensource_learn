@@ -1,5 +1,5 @@
 version: 1
-last_updated: 2026-05-07
+last_updated: 2026-09-30
 
 new_category_policy:
   allowed: true
@@ -151,6 +151,16 @@ domains:
         examples:
           - shadcn/ui
           - lightweight-charts
+      desktop-ui:
+        label: 桌面 UI 框架
+        path: dev-tools/desktop-ui
+        include:
+          - 原生桌面 GUI 框架、桌面组件库与控件体系，跨 macOS/Windows/Linux 渲染。
+          - 以自绘或 GPU 渲染替代 Web 技术栈的桌面应用开发框架，附带布局、编辑器、表格等应用级能力。
+        exclude:
+          - 基于 HTML/CSS/React 的 Web 前端组件库归入 dev-tools/frontend。
+          - 单个桌面效率应用本身，归入 dev-tools/productivity。
+        examples: []
       infra:
         label: 基础设施
         path: dev-tools/infra

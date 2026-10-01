@@ -14,7 +14,7 @@
   <th>简介</th>
 </tr>
 <tr>
-  <td rowspan="121"><b>AI</b></td>
+  <td rowspan="144"><b>AI</b></td>
   <td rowspan="11">Agent 框架</td>
   <td><a href="./ai/agent-framework/a2aproject-A2A-learn">A2A</a></td>
   <td>Google Agent2Agent 开放协议，定义 AI Agent 间通信与协作标准</td>
@@ -60,7 +60,7 @@
   <td>User-Aware LLM Agent 框架，自然语言转 SQL 并流式返回富 UI 组件</td>
 </tr>
 <tr>
-  <td rowspan="9">Agent 系统</td>
+  <td rowspan="11">Agent 系统</td>
   <td><a href="./ai/agent-system/yikart-AiToEarn-learn">AiToEarn</a></td>
   <td>面向创作者的 AI Agent 内容生产与多平台分发变现平台，Claude Agent SDK + 13 平台 + MCP 编排全自动流水线</td>
 </tr>
@@ -85,8 +85,16 @@
   <td>Rust 编写的 Agent Operating System，14 个模块化 crate</td>
 </tr>
 <tr>
+  <td><a href="./ai/agent-system/every-app-open-seo-learn">open-seo</a></td>
+  <td>开源 SEO 工具集（Semrush/Ahrefs 替代），Cloudflare Workers 全栈，以 MCP server + Agent Skills + 内置 AI agent 三形态服务人类与 AI agent</td>
+</tr>
+<tr>
   <td><a href="./ai/agent-system/volcengine-OpenViking-learn">OpenViking</a></td>
   <td>字节跳动 Agent 上下文数据库，文件系统范式管理记忆、资源和技能</td>
+</tr>
+<tr>
+  <td><a href="./ai/agent-system/paperclipai-paperclip-learn">paperclip</a></td>
+  <td>AI Agent「公司」控制平面，把异构 coding agent 组织成有预算、任务与治理审批的组织，核心是 DB 持久化心跳调度器</td>
 </tr>
 <tr>
   <td><a href="./ai/agent-system/vxcontrol-pentagi-learn">PentAGI</a></td>
@@ -122,9 +130,13 @@
   <td>腾讯优图下一代 Agentic RAG 系统，自主决策 + 双层记忆 + 多 Agent 协作</td>
 </tr>
 <tr>
-  <td rowspan="26">编程工具</td>
+  <td rowspan="37">编程工具</td>
   <td><a href="./ai/coding-tool/rohitg00-agentmemory-learn">agentmemory</a></td>
   <td>跨 AI 编码 Agent 共享的持久化记忆层，hook 自动采集 + LLM 压缩 + BM25/向量/知识图谱混合检索</td>
+</tr>
+<tr>
+  <td><a href="./ai/coding-tool/tt-a1i-archify-learn">archify</a></td>
+  <td>把自然语言或真实仓库代码变成 schema 校验、原子交付、真实浏览器验证的交互式 standalone HTML 架构图的 Agent Skill</td>
 </tr>
 <tr>
   <td><a href="./ai/coding-tool/coleam00-Archon-learn">Archon</a></td>
@@ -155,12 +167,20 @@
   <td>OpenAI 本地 AI 编程助手，沙箱化命令执行实现安全自主编码</td>
 </tr>
 <tr>
+  <td><a href="./ai/coding-tool/mksglu-context-mode-learn">context-mode</a></td>
+  <td>跨 17+ 客户端的 MCP 插件型服务器，沙箱代码执行 + FTS5 会话记忆把原始数据挡在上下文窗口外，官方口径节省 98% 上下文</td>
+</tr>
+<tr>
   <td><a href="./ai/coding-tool/upstash-context7-learn">Context7</a></td>
   <td>为 AI 编程助手提供实时、版本准确的库文档和代码示例</td>
 </tr>
 <tr>
   <td><a href="./ai/coding-tool/andrewyng-context-hub-learn">Context Hub</a></td>
   <td>为 AI 编程 Agent 提供精选版本化 API 文档和技能检索服务</td>
+</tr>
+<tr>
+  <td><a href="./ai/coding-tool/chuspeeism-dashi-ppt-skill-learn">dashi-ppt-skill</a></td>
+  <td>面向 AI Agent 的 PPT 生成 Skill，结构化 JSON 计划 + 12 套主题 1020 个版式选配，React SSR 渲染并导出可编辑 PPTX</td>
 </tr>
 <tr>
   <td><a href="./ai/coding-tool/affaan-m-everything-claude-code-learn">Everything Claude Code</a></td>
@@ -181,6 +201,14 @@
 <tr>
   <td><a href="./ai/coding-tool/abhigyanpatwari-GitNexus-learn">GitNexus</a></td>
   <td>将代码库索引为知识图谱，通过 MCP 协议为 AI Agent 提供深度代码感知</td>
+</tr>
+<tr>
+  <td><a href="./ai/coding-tool/herdrdev-herdr-learn">herdr</a></td>
+  <td>Rust 编写的 AI coding agent 终端运行时，tmux 式 client-server 多路复用器，围绕 agent 状态检测、会话恢复与协作深度特化</td>
+</tr>
+<tr>
+  <td><a href="./ai/coding-tool/ayghri-i-have-adhd-learn">i-have-adhd</a></td>
+  <td>把「ADHD 友好输出风格」沉淀为单一 SKILL.md 真源，适配十余家 AI 编码工具，配 LLM 盲评管线验证行为质量</td>
 </tr>
 <tr>
   <td><a href="./ai/coding-tool/mvanhorn-last30days-skill-learn">last30days-skill</a></td>
@@ -207,12 +235,28 @@
   <td>100% 开源终端 AI 编程助手，不绑定任何 AI 供应商</td>
 </tr>
 <tr>
+  <td><a href="./ai/coding-tool/alibaba-open-code-review-learn">open-code-review</a></td>
+  <td>阿里开源 AI 代码审查 CLI，确定性工程硬约束 LLM Agent 产出行级精准评论，token 消耗约为通用 Agent 的 1/9</td>
+</tr>
+<tr>
   <td><a href="./ai/coding-tool/langchain-ai-open-swe-learn">Open SWE</a></td>
   <td>基于 LangGraph 的开源编程 Agent 框架，支持多渠道触发和沙箱执行</td>
 </tr>
 <tr>
   <td><a href="./ai/coding-tool/Fission-AI-OpenSpec-learn">OpenSpec</a></td>
   <td>AI 原生 spec-driven 开发框架，人类和 AI 在写代码前先对齐需求</td>
+</tr>
+<tr>
+  <td><a href="./ai/coding-tool/earendil-works-pi-learn">pi</a></td>
+  <td>自扩展编码 agent 体系：统一多提供商 LLM API + agent 运行时 + 交互式编码 CLI 的分层 monorepo，进程内 TypeScript 扩展让 agent 能修改自身</td>
+</tr>
+<tr>
+  <td><a href="./ai/coding-tool/DietrichGebert-ponytail-learn">ponytail</a></td>
+  <td>给 AI coding agent 注入「懒资深工程师」人格的规则集，7 级决策阶梯写最少但正确的代码，单一真源分发到 20+ agent 宿主</td>
+</tr>
+<tr>
+  <td><a href="./ai/coding-tool/cloudflare-security-audit-skill-learn">security-audit-skill</a></td>
+  <td>Cloudflare 开源 coding-agent 安全审计 skill，覆盖率台账 + 对抗式独立验证 + 零依赖校验器，只报有源码证据可复现的漏洞</td>
 </tr>
 <tr>
   <td><a href="./ai/coding-tool/github-spec-kit-learn">spec-kit</a></td>
@@ -227,7 +271,15 @@
   <td>跨 14 个 AI 编程平台的多 Agent 知识图谱插件，把代码库解析为可视化节点 + 边图并提供引导浏览 dashboard</td>
 </tr>
 <tr>
-  <td rowspan="11">客户端</td>
+  <td><a href="./ai/coding-tool/guillaumemeyer-watermarks-remover-learn">watermarks-remover</a></td>
+  <td>「薄 skill + 厚 service」的 Agent Skill 工程范本，零依赖 Python 服务按三层从自有内容剥离多厂商 AI 溯源水印</td>
+</tr>
+<tr>
+  <td><a href="./ai/coding-tool/max-sixty-worktrunk-learn">worktrunk</a></td>
+  <td>Rust 编写的 git worktree 管理 CLI，三条核心命令压缩创建/切换/合并/清理，专为并行运行多个 AI agent 设计</td>
+</tr>
+<tr>
+  <td rowspan="12">客户端</td>
   <td><a href="./ai/client/google-ai-edge-gallery-learn">AI Edge Gallery</a></td>
   <td>Google 官方 Android 端侧 AI 应用，本地离线运行 LLM 进行对话、图片理解和 Agent Skills</td>
 </tr>
@@ -242,6 +294,10 @@
 <tr>
   <td><a href="./ai/client/CherryHQ-cherry-studio-learn">Cherry Studio</a></td>
   <td>Electron 跨平台 AI 桌面客户端，支持 MCP 协议和知识库 RAG</td>
+</tr>
+<tr>
+  <td><a href="./ai/client/bilawalsidhu-gods-eye-view-learn">gods-eye-view</a></td>
+  <td>浏览器端实时地理情报 3D 地球控制台，CesiumJS 聚合航班/船舶/卫星/地震等公开数据源，OpenAI Realtime 语音操控</td>
 </tr>
 <tr>
   <td><a href="./ai/client/BasedHardware-omi-learn">omi</a></td>
@@ -272,7 +328,11 @@
   <td>AI 驱动的实时全球情报仪表盘，聚合 435+ 新闻源与 30+ 数据源</td>
 </tr>
 <tr>
-  <td rowspan="21">基础设施</td>
+  <td rowspan="26">基础设施</td>
+  <td><a href="./ai/infra/lyogavin-airllm-learn">airllm</a></td>
+  <td>离线按层切分 checkpoint + 在线 forward-hook 流式加载，把超大 LLM 推理显存压到单层权重大小，70B 模型跑在 4GB 显卡</td>
+</tr>
+<tr>
   <td><a href="./ai/infra/karpathy-autoresearch-learn">autoresearch</a></td>
   <td>Karpathy 的自主研究框架，AI Agent 在固定时间预算内自主迭代 LLM 训练实验</td>
 </tr>
@@ -293,8 +353,16 @@
   <td>AI Agent 知识引擎，LLM 驱动构建知识图谱 + 向量索引，提供 remember/recall/forget/improve 语义化记忆 API</td>
 </tr>
 <tr>
+  <td><a href="./ai/infra/trycua-cua-learn">cua</a></td>
+  <td>给 AI agent 用的计算机基础设施 monorepo：跨平台桌面自动化引擎、本地/云隔离桌面、computer-use 决策小模型与评测框架</td>
+</tr>
+<tr>
   <td><a href="./ai/infra/daytonaio-daytona-learn">Daytona</a></td>
   <td>安全弹性的 Sandbox 基础设施平台，亚 90ms 创建隔离沙箱执行 AI 生成代码</td>
+</tr>
+<tr>
+  <td><a href="./ai/infra/citrolabs-ego-lite-learn">ego-lite</a></td>
+  <td>人与 AI Agent 共用的 Chromium 浏览器连接层，把浏览器能力封装为单次脚本可直接调用的 JS 函数，替代传统 CLI 反复调命令的循环</td>
 </tr>
 <tr>
   <td><a href="./ai/infra/firecrawl-firecrawl-learn">Firecrawl</a></td>
@@ -313,6 +381,10 @@
   <td>微软多格式文件转 Markdown 工具，支持 PDF/Word/Excel 等 18+ 种格式，专为 LLM 设计</td>
 </tr>
 <tr>
+  <td><a href="./ai/infra/ahujasid-mcp-for-blender-learn">mcp-for-blender</a></td>
+  <td>Blender addon + FastMCP server 双进程桥接，36 个 MCP tool 让 LLM 驱动 bpy 建模操作，可选 AST 沙箱与遥测</td>
+</tr>
+<tr>
   <td><a href="./ai/infra/QuantumNous-new-api-learn">new-api</a></td>
   <td>下一代 LLM 网关，统一代理 30+ 家 AI 供应商 API，智能路由与计费管理</td>
 </tr>
@@ -323,6 +395,10 @@
 <tr>
   <td><a href="./ai/infra/alibaba-OpenSandbox-learn">OpenSandbox</a></td>
   <td>阿里巴巴通用 AI 沙箱平台，多语言 SDK + Docker/K8s 运行时</td>
+</tr>
+<tr>
+  <td><a href="./ai/infra/dottxt-ai-outlines-learn">outlines</a></td>
+  <td>LLM 结构化生成库，把 Python 类型 / Pydantic 模型 / 正则 / CFG 统一编译成 token 级约束，生成时直接屏蔽非法 token</td>
 </tr>
 <tr>
   <td><a href="./ai/infra/hugohe3-ppt-master-learn">ppt-master</a></td>
@@ -394,7 +470,7 @@
   <td>基于 LangGraph 的中文多智能体股票分析平台，多角色协作辩论输出投资建议</td>
 </tr>
 <tr>
-  <td rowspan="12">多媒体</td>
+  <td rowspan="13">多媒体</td>
   <td><a href="./ai/multimedia/hacksider-Deep-Live-Cam-learn">Deep-Live-Cam</a></td>
   <td>基于 InsightFace 的实时人脸替换工具，单张图片即可换脸</td>
 </tr>
@@ -431,6 +507,10 @@
   <td>BYOK 多模态生成 studio，Next.js Web + Electron 桌面双前端，桥接 muapi.ai 与本地 sd.cpp/Wan2GP 推理</td>
 </tr>
 <tr>
+  <td><a href="./ai/multimedia/calesthio-OpenMontage-learn">OpenMontage</a></td>
+  <td>agent-first 开源视频生产系统，AI 编程助手担任 orchestrator，按 YAML pipeline 驱动影视级流水线，Python 侧提供 130+ 生产工具</td>
+</tr>
+<tr>
   <td><a href="./ai/multimedia/supertone-inc-supertonic-learn">supertonic</a></td>
   <td>Supertone 端侧多语言 TTS 系统，ONNX Runtime 推理 + 11 套语言/平台 SDK 示例</td>
 </tr>
@@ -443,7 +523,7 @@
   <td>微软语音 AI 模型家族，支持长达 90 分钟 TTS 和 60 分钟 ASR</td>
 </tr>
 <tr>
-  <td rowspan="16">学习资料</td>
+  <td rowspan="19">学习资料</td>
   <td><a href="./ai/resource/humanlayer-12-factor-agents-learn">12-factor-agents</a></td>
   <td>模仿 12 Factor App 的 LLM Agent 工程方法论指南，配 TypeScript + BAML 参考实现与教程生成器</td>
 </tr>
@@ -476,8 +556,20 @@
   <td>Datawhale Vibe Coding 多语言教程站，VitePress + 700+ 交互式 Vue 组件可视化 AI 与前后端基础</td>
 </tr>
 <tr>
+  <td><a href="./ai/resource/plannotator-effective-html-learn">effective-html</a></td>
+  <td>「prompt 即产品」的 Agent Skills 集合，6 份 SKILL.md 教编码代理产出自包含、无构建依赖的 HTML 产物（线框图、原型、计划、图表）</td>
+</tr>
+<tr>
+  <td><a href="./ai/resource/helloianneo-ian-xiaohei-illustrations-learn">ian-xiaohei-illustrations</a></td>
+  <td>零代码 Codex Skill，1 份 SKILL.md + 5 份知识文档 + 提示词模板，把中文文章配怪诞手绘插图约束成 AI 可稳定复用的生产流程</td>
+</tr>
+<tr>
   <td><a href="./ai/resource/pbakaus-impeccable-learn">impeccable</a></td>
   <td>跨 AI 编码工具的前端设计 skill 分发系统，统一源格式转换为 11 个 provider 专属格式</td>
+</tr>
+<tr>
+  <td><a href="./ai/resource/anthropics-knowledge-work-plugins-learn">knowledge-work-plugins</a></td>
+  <td>Anthropic 官方 Claude 插件市场，纯 Markdown + JSON 定义 130+ 知识工作插件，GitHub Actions 用 Claude 当安全审查员治理供应链</td>
 </tr>
 <tr>
   <td><a href="./ai/resource/shareAI-lab-learn-claude-code-learn">learn-claude-code</a></td>
@@ -508,7 +600,7 @@
   <td>30+ AI 工具的 System Prompt 与 Tool 定义收集库</td>
 </tr>
 <tr>
-  <td rowspan="24"><b>开发工具</b></td>
+  <td rowspan="26"><b>开发工具</b></td>
   <td rowspan="2">前端</td>
   <td><a href="./dev-tools/frontend/shadcn-ui-ui-learn">shadcn/ui</a></td>
   <td>基于 Radix UI 和 Tailwind CSS 的组件集合，CLI 工具将源码直接复制到项目中</td>
@@ -518,9 +610,18 @@
   <td>TradingView 轻量级金融图表库，基于 HTML5 Canvas 实现高性能 K 线图等金融数据可视化</td>
 </tr>
 <tr>
-  <td rowspan="5">基础设施</td>
+  <td rowspan="1">桌面 UI 框架</td>
+  <td><a href="./dev-tools/desktop-ui/longbridge-gpui-kit-learn">gpui-kit</a></td>
+  <td>Longbridge 基于 Zed GPUI 抽取的 Rust 桌面应用框架，无样式行为层 + 视觉组件系统 + QuickJS 驱动的 JS 扩展运行时</td>
+</tr>
+<tr>
+  <td rowspan="6">基础设施</td>
   <td><a href="./dev-tools/infra/dolthub-dolt-learn">Dolt</a></td>
   <td>MySQL 兼容数据库，基于 Prolly Tree 存储引擎提供 Git 级别版本控制能力</td>
+</tr>
+<tr>
+  <td><a href="./dev-tools/infra/fmtlib-fmt-learn">fmt</a></td>
+  <td>C++ 格式化库，三个头文件最小内核，编译期校验格式串 + 类型擦除参数包直写缓冲区，C++20 std::format 参考实现</td>
 </tr>
 <tr>
   <td><a href="./dev-tools/infra/harness-harness-learn">Harness</a></td>
